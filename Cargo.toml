@@ -1,0 +1,13 @@
+[workspace]
+members = [
+    "crates/sms-data-clean",
+    "crates/spam-classifier-sm",
+]
+resolver = "2"
+
+
+[patch.crates-io]
+smartcore = { git = "https://github.com/smartcorelib/smartcore.git", rev = "8efb959b3cff5b6700c630f03d4fa857e3c6729c" }
+
+[profile.release]
+lto = true
